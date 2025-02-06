@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CheescakeOrdezkaritza.PartnerrakIkusi"
+             Title="Partnerrak">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <ListView ItemsSource="{Binding Partnerrak}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Izena}" FontAttributes="Bold"/>
+                                <Label Text="{Binding Helbidea}" />
+                                <Label Text="{Binding Telefonoa}" />
+                                <Label Text="{Binding Email}" />
+                                
+                                <Label Text="{Binding OrdezkaritzaIzena}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+    
+    
+</ContentPage>
