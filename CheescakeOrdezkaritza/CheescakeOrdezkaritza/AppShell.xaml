@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CheescakeOrdezkaritza.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CheescakeOrdezkaritza"
+    FlyoutBehavior="Disabled"
+    Title="CheescakeOrdezkaritza"
+    Shell.TabBarForegroundColor="#FFBF00"
+    Shell.TabBarTitleColor="black">
+
+    <TabBar>
+        <Tab Title="Hasiera" Icon="home.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+
+        <Tab Title="XML kargatu" Icon="add_document.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:XmlKargatuPage}"
+                Route="xmlKargatu" />
+        </Tab>
+        <Tab Title="Ordezkaritzak">
+            <ShellContent
+        ContentTemplate="{DataTemplate local:OrdezkariakIkusi}"
+        Route="ordezkariakIkusi" />
+        </Tab>
+
+        <Tab Title="Partnerrak" Icon="partner.png">
+            <ShellContent
+        ContentTemplate="{DataTemplate local:PartnerrakIkusi}"
+        Route="partnerrakIkusi" />
+        </Tab>
+
+        <Tab Title="Produktuak" Icon="cake.png">
+            <ShellContent
+ContentTemplate="{DataTemplate local:ProduktuakPage}"
+Route="ProduktuakPage" />
+        </Tab>
+
+        <Tab Title="Eskaera" Icon="order.png">
+            <ShellContent
+ContentTemplate="{DataTemplate local:EskaerakPage}"
+Route="EskaerakPage" />
+        </Tab>
+
+
+    </TabBar>
+
+</Shell>

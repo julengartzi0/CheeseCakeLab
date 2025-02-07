@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CheescakeOrdezkaritza.EskaerakPage"
+             Title="Eskaerak">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <ListView ItemsSource="{Binding EskaeraXehetasunak}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="15" Margin="5" CornerRadius="10" BorderColor="Gray" HasShadow="True">
+                                <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+
+                                    <!-- Columna izquierda: Nombres de atributos -->
+                                    <StackLayout Grid.Column="0" VerticalOptions="Center">
+                                        <Label Text="Xehetasun Kodea:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Eskaera Kodea:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Produktua Kodea:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Izena:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Kantitatea:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Prezioa:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Eskaera Data:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Partner Kodea:" FontAttributes="Bold" FontSize="16"/>
+                                    </StackLayout>
+
+                                    <!-- Columna derecha: Valores -->
+                                    <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                        <Label Text="{Binding XehetasunKodea}" FontSize="16"/>
+                                        <Label Text="{Binding EskaeraKodea}" FontSize="16"/>
+                                        <Label Text="{Binding ProduktuaKodea}" FontSize="16"/>
+                                        <Label Text="{Binding Izena}" FontSize="16"/>
+                                        <Label Text="{Binding Kantitatea}" FontSize="16"/>
+                                        <Label Text="{Binding Prezioa}" FontSize="16"/>
+                                        <Label Text="{Binding EskaeraData}" FontSize="16"/>
+                                        <Label Text="{Binding PartnerKodea}" FontSize="16"/>
+                                    </StackLayout>
+
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

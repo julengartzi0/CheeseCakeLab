@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CheescakeOrdezkaritza.PartnerrakIkusi"
+             Title="Partnerrak">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <ListView ItemsSource="{Binding Partnerrak}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="15" Margin="5" CornerRadius="10" BorderColor="Gray" HasShadow="True">
+                                <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto">
+
+                                    <!-- Columna izquierda: Nombres de atributos -->
+                                    <StackLayout Grid.Column="0" VerticalOptions="Center">
+                                        <Label Text="Izena:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Helbidea:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Telefonoa:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Email:" FontAttributes="Bold" FontSize="16"/>
+                                        <Label Text="Ordezkaritza:" FontAttributes="Bold" FontSize="16"/>
+                                    </StackLayout>
+
+                                    <!-- Columna derecha: Valores -->
+                                    <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                        <Label Text="{Binding Izena}" FontSize="16"/>
+                                        <Label Text="{Binding Helbidea}" FontSize="16"/>
+                                        <Label Text="{Binding Telefonoa}" FontSize="16"/>
+                                        <Label Text="{Binding Email}" FontSize="16"/>
+                                        <Label Text="{Binding OrdezkaritzaIzena}" FontSize="16"/>
+                                    </StackLayout>
+
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
